@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Background aesthetic */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, #ff9f1c, #ff7a00);
+  clip-path: ellipse(70% 60% at 80% 20%);
+  z-index: -1;
+}
+
+/* Container */
+.auth-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 35px;
+  width: 360px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.dashboard-card{
+  background: rgba(255,255,255,0.95);
+  padding:40px;
+  width:700px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card h1,
+.dashboard-card h1 {
+  margin: 0;
+  color: #ff7a00;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Input aesthetic */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+textarea{
+  border:2px solid #ddd;
+  border-radius:8px;
+  resize:none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #aaa;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: #ff7a00;
+}
+
+.input-group input:focus {
+  border-bottom-color: #ff7a00;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff7a00, #ff9f1c);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255,122,0,0.4);
+}
+
+/* Switch text */
+.switch {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+.switch span {
+  color: #ff7a00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #ff7a00;
+  font-weight: bold;
+}
+
+/* DASHBOARD */
+
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+table th{
+  background:#ff7a00;
+  color:white;
+  padding:10px;
+}
+
+table td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+  text-align:center;
+}
+
+table tr:hover{
+  background:#fff4ec;
+}
+
+/* Logout */
+.logout{
+  display:inline-block;
+  margin-bottom:20px;
+  color:#ff7a00;
+  font-weight:bold;
+  text-decoration:none;
+}
